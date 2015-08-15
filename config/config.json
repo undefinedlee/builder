@@ -1,0 +1,55 @@
+{
+	// 当前环境（默认为开发环境）
+	"env": "test",
+	// 当前系统
+	"system": "test",
+	// 默认组（模块加载时缺省组）
+	"default-group": "mod",
+	// 发布相关
+	"publish": {
+		"dev": {
+			"host": "dev.ms.hyfiles.com",
+			"path": "",
+			// 开发本地服务备用环境
+			"back-env": "test",
+			"mini": false,
+			"ftp": {}
+		},
+		"test": {
+			// 静态文件服务器域名
+			"host": "test.ms.hyfiles.com",
+			// 静态文件本地发布路径
+			"path": "",
+			// 是否压缩
+			"mini": false,
+			// 发布ftp配置
+			"ftp": {
+				// ftp发布路径
+				"root": "files",
+				// 测试服务器路径分隔符
+				"sep": "/",
+				// 
+				"host": "192.168.3.163",
+				// 
+				"port": "21",
+				// 
+				"user": "static-ftp",
+				//
+				"password": "123456"
+			}
+		},
+		"release": {
+			"host": "ms.hyfiles.com",
+			"path": "",
+			"mini": true,
+			"ftp": {
+				"root": "",
+				"sep": "\\",
+				"host": "192.168.3.150",
+				"port": "21",
+				"user": "lifan",
+				"password": "lifan"
+			}
+		}
+	}
+}

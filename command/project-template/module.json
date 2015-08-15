@@ -1,0 +1,14 @@
+{
+	// 模块名称
+	"name": "",
+	// 模块组名
+	"group": "",
+	// 模块版本
+	"version": "0.0.0",
+	// 模块类型
+	"module-type": "module",
+	// 模块对外暴露文件
+	"entries": [
+		"index.js"
+	]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "hyjs",
+  "version": "0.1.27",
+  "description": "",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undefinedlee/hyjs.git"
+  },
+  "keywords": [
+    "hyjs",
+    "javascript"
+  ],
+  "author": {
+    "name": "undefinedlee",
+    "email": "0@00010101.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undefinedlee/hyjs/issues"
+  },
+  "homepage": "https://github.com/undefinedlee/hyjs",
+  "dependencies": {
+    "commander": "^2.3.0",
+    "express": "^4.8.2",
+    "clean-css": "^2.2.16",
+    "uglify-js": "^2.4.20",
+    "ftp": "^0.3.7",
+    "compression": "^1.2.1",
+    "mime": "^1.3.4",
+    "stylus": "^0.50.0",
+    "colors": "^1.0.3",
+    "nib": "^1.1.0"
+  },
+  "bin": {
+    "hyjs": "bin/hyjs-cli.js"
+  }
+}
