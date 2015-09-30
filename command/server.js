@@ -29,6 +29,8 @@ function read(path, callback){
 	path = path.split("?")[0];
 	
 	var localPath;
+	var request;
+	var _callback;
 
 	if(isDev){
 		localPath = pathMod.join(root, path.replace(constConfig.versionCheck, "/" + constConfig.devVersion + "/").replace(/\//g, sep));
@@ -45,9 +47,13 @@ function read(path, callback){
 			localPath = "http://" + [backConfig.publish.host, path].join("/").replace(/\/+/g, "/");
 			//console.log(localPath);
 			//localPath = "http://www.baidu.com";
-			http.get(localPath, function(res){
+			_callback = function(e, data){
+			    request.destroy();
+			    callback(e, data);
+			};
+			request = http.get(localPath, function(res){
 				if(res.statusCode != 200){
-					callback({
+					_callback({
 						msg: "请求错误"
 					}, null);
 					return;
@@ -60,13 +66,13 @@ function read(path, callback){
 				});
 				res.on('end', function(){
 					var data = Buffer.concat(chunks, size);
-					callback(null, {
+					_callback(null, {
 						contentType: res.headers['content-type'],
 						data: data
 					});
 				});
 			}).on('error', function(e) {
-				callback(e, null);
+				_callback(e, null);
 			});
 		}
 	}else{
