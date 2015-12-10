@@ -1,7 +1,7 @@
 {
   "name": "hyjs",
-  "version": "0.1.30",
-  "description": "",
+  "version": "0.1.32",
+  "description": "builder",
   "scripts": {
     "test": ""
   },
@@ -36,5 +36,6 @@
   },
   "bin": {
     "hyjs": "bin/hyjs-cli.js"
-  }
+  },
+  "readme": "ready.md"
 }

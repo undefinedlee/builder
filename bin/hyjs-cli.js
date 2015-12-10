@@ -56,7 +56,7 @@ program
 			console.log(config.env);
 		}
 	});
-
+	
 // 初始化一个项目
 program
 	.command('init [path]')

@@ -29,17 +29,18 @@ var config = module.exports = function(isNative){
 		isNative = isNative || config.env;
 		config.publish = config.publish[isNative] || config.publish["tpl"];
 		if(!config.publish["path"]){
-			switch(isNative){
-				case "dev":
-					config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish");
-					break;
-				case "test":
-					config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish-test");
-					break;
-				case "release":
-					config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish-release");
-					break;
-			}
+			config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish-" + isNative);
+			// switch(isNative){
+			// 	case "dev":
+			// 		config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish");
+			// 		break;
+			// 	case "test":
+			// 		config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish-test");
+			// 		break;
+			// 	case "release":
+			// 		config.publish["path"] = path.join(process.env.HOME, ".hyjs-publish-release");
+			// 		break;
+			// }
 		}
 	}
 

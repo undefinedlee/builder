@@ -1,35 +1,19 @@
 {
-	// 当前环境（默认为开发环境）
 	"env": "dev",
-	// 当前系统
 	"system": "test",
-	// 默认组（模块加载时缺省组）
 	"default-group": "lib",
-	// 发布相关
 	"publish": {
-		// 配置模板
 		"tpl": {
-			// 发布后的访问域名
 			"host": "",
-			// 本地发布目录
 			"path": "",
-			// 是否压缩
 			"mini": false,
-			// 备选环境
 			"back-env": "",
-			// 发布ftp配置
 			"ftp": {
-				// 发布到ftp的目录
 				"root": "",
-				// 发布机器的路径分隔符
 				"sep": "/",
-				// ftp ip
 				"host": "127.0.0.1",
-				// ftp 端口号
 				"port": "21",
-				// ftp 用户名
 				"user": "",
-				// ftp 密码
 				"password": ""
 			}
 		}
