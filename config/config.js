@@ -22,8 +22,12 @@ var config = module.exports = function(isNative){
 	config = mix(config, baseConfig);
 
 	if(isNative !== true){
+		if(isNative === "tpl"){
+			console.error("env can not is tpl");
+			return;
+		}
 		isNative = isNative || config.env;
-		config.publish = config.publish[isNative];
+		config.publish = config.publish[isNative] || config.publish["tpl"];
 		if(!config.publish["path"]){
 			switch(isNative){
 				case "dev":

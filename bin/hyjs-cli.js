@@ -46,6 +46,10 @@ program
 		var config = configMod();
 
 		if(env){
+			if(env === "tpl"){
+				console.error("env can not is tpl");
+				return;
+			}
 			config.env = env;
 			configMod.set(config);
 		}else{
